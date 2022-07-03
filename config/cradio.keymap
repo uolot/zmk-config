@@ -23,6 +23,7 @@
 
 / {
 
+    /*
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -65,6 +66,7 @@
 
 
     };
+    */
 
     keymap {
         compatible = "zmk,keymap";
