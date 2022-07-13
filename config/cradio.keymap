@@ -12,7 +12,7 @@
 #define FUNC 5
 
 #define HYPER LC(LS(LG(LALT)))
-#define MEH LC(LS(LGUI))
+#define MEH LC(LS(LALT))
 #define PREVTAB LC(LS(TAB))
 #define NEXTTAB LC(TAB)
 
