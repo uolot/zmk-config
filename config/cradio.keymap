@@ -23,6 +23,13 @@
 
 / {
 
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C_PLAY_PAUSE>, <&kp C_NEXT>, <&kp C_PREV>;
         };
     };
 
@@ -61,7 +68,7 @@
             bindings = <
        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp COLON
-       &none        &sk RALT     &none        &none        &sk MEH            &kp DELETE   &kp BSPC     &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE
+       &none        &sk RALT     &none        &none        &sk MEH            &kp DELETE   &kp BSPC     &kp C_VOL_DN &kp C_VOL_UP &td0
                                               &none        &none              &none        &none
                 >;
         };
