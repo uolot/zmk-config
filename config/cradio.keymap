@@ -75,9 +75,9 @@
 
         numpad_layer {
             bindings = <
-       &sl FUNC     &none        &none        &none        &none              &kp KP_PLUS  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_ASTERISK
+       &sl FUNC     &kp LG(W)    &none        &none        &kp LG(T)          &kp KP_PLUS  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_ASTERISK
        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp KP_MINUS &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_SLASH
-       &kp LG(T)    &kp LG(W)    &kp PREVTAB  &kp NEXTTAB  &sk MEH            &kp KP_N1    &kp KP_N1    &kp KP_N2    &kp KP_N3    &none
+       &none        &none        &kp PREVTAB  &kp NEXTTAB  &sk MEH            &kp KP_N1    &kp KP_N1    &kp KP_N2    &kp KP_N3    &none
                                               &none        &none              &kp COLON    &kp KP_N0
                 >;
         };
