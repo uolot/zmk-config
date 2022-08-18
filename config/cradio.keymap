@@ -49,7 +49,7 @@
             bindings = <
 
        &kp EXCL     &kp AT       &kp GRAVE    &kp STAR     &kp LT             &none        &kp LBKT     &kp RBKT     &none        &none
-       &kp DLLR     &kp PIPE     &kp SQT      &kp MINUS    &kp EQUAL          &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
+       &kp PIPE     &kp DLLR     &kp SQT      &kp MINUS    &kp EQUAL          &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
        &kp BSLH     &none        &kp LPAR     &kp RPAR     &kp GT             &sk MEH      &kp LBRC     &kp RBRC     &sk RALT     &none
                                               &none        &none              &kp COLON    &mo SYM2
                 >;
@@ -58,7 +58,7 @@
         symbols2_layer {
             bindings = <
        &kp QUESTION &kp PERCENT  &kp TILDE    &kp HASH     &none              &none        &none        &none        &none        &none
-       &kp CARET    &kp AMPS     &kp DQT      &kp UNDER    &kp PLUS           &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
+       &kp AMPS     &kp CARET    &kp DQT      &kp UNDER    &kp PLUS           &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
        &none        &none        &none        &none        &none              &sk MEH      &none        &none        &sk RALT     &none
                                               &none        &none              &none        &none
                 >;
