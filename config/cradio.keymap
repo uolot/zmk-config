@@ -24,12 +24,33 @@
 / {
 
     behaviors {
-        td0: tap_dance_0 {
+        td_media: tap_dance_media {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp C_PLAY_PAUSE>, <&kp C_NEXT>, <&kp C_PREV>;
+        };
+        td_misl: tap_dance_minus_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MINUS_SLASH";
+            #binding-cells = <0>;
+            tapping-term-ms = <160>;
+            bindings = <&kp KP_MINUS>, <&kp KP_SLASH>;
+        };
+        td_plas: tap_dance_plus_asterisk {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_PLUS_ASTERISK";
+            #binding-cells = <0>;
+            tapping-term-ms = <160>;
+            bindings = <&kp KP_PLUS>, <&kp KP_ASTERISK>;
+        };
+        td_codo: tap_dance_colon_dot {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_COLON_DOT";
+            #binding-cells = <0>;
+            tapping-term-ms = <160>;
+            bindings = <&kp COLON>, <&kp DOT>;
         };
     };
 
@@ -68,17 +89,17 @@
             bindings = <
        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp COLON
-       &none        &sk RALT     &none        &none        &sk MEH            &kp DELETE   &kp BSPC     &kp C_VOL_DN &kp C_VOL_UP &td0
+       &none        &sk RALT     &none        &none        &sk MEH            &kp DELETE   &kp BSPC     &kp C_VOL_DN &kp C_VOL_UP &td_media
                                               &none        &none              &none        &none
                 >;
         };
 
         numpad_layer {
             bindings = <
-       &sl FUNC     &kp LG(W)    &none        &kp LG(R)    &kp LG(T)          &kp KP_PLUS  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_ASTERISK
-       &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp KP_MINUS &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_SLASH
+       &sl FUNC     &kp LG(W)    &none        &kp LG(R)    &kp LG(T)          &td_plas     &kp KP_N7    &kp KP_N8    &kp KP_N9    &none
+       &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &td_misl     &kp KP_N4    &kp KP_N5    &kp KP_N6    &none
        &none        &none        &kp PREVTAB  &kp NEXTTAB  &sk MEH            &kp KP_N1    &kp KP_N1    &kp KP_N2    &kp KP_N3    &none
-                                              &none        &none              &kp COLON    &kp KP_N0
+                                              &none        &none              &td_codo     &kp KP_N0
                 >;
         };
 
