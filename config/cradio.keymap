@@ -15,6 +15,8 @@
 #define MEH LC(LS(LALT))
 #define PREVTAB LC(LS(TAB))
 #define NEXTTAB LC(TAB)
+#define NAVBACK LG(LEFT)
+#define NAVFWD LG(RIGHT)
 
 &mt {
     //  flavor = "tap-preferred";
@@ -98,7 +100,7 @@
             bindings = <
        &sl FUNC     &kp LG(W)    &none        &kp LG(R)    &kp LG(T)          &td_plas     &kp KP_N7    &kp KP_N8    &kp KP_N9    &none
        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &td_misl     &kp KP_N4    &kp KP_N5    &kp KP_N6    &none
-       &none        &none        &kp PREVTAB  &kp NEXTTAB  &sk MEH            &kp KP_N1    &kp KP_N1    &kp KP_N2    &kp KP_N3    &none
+       &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB  &sk MEH            &kp KP_N1    &kp KP_N1    &kp KP_N2    &kp KP_N3    &none
                                               &none        &none              &td_codo     &kp KP_N0
                 >;
         };
