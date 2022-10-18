@@ -25,6 +25,16 @@
 
 / {
 
+    combos {
+        compatible = "zmk,combos";
+        combo_symbols {
+            timeout-ms = <50>;
+            key-positions = <31 34>;
+            bindings = <&mo SYM2>;
+            layers = <0 SYM1 SYM2>;
+        };
+    };
+
     behaviors {
         td_media: tap_dance_media {
             compatible = "zmk,behavior-tap-dance";
@@ -83,7 +93,7 @@
        &kp QUESTION &kp PERCENT  &kp TILDE    &kp HASH     &none              &none        &none        &none        &none        &none
        &kp AMPS     &kp CARET    &kp DQT      &kp UNDER    &kp PLUS           &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
        &none        &none        &none        &none        &none              &sk MEH      &none        &none        &sk RALT     &none
-                                              &none        &none              &none        &none
+                                              &mo SYM1     &none              &none        &none
                 >;
         };
 
