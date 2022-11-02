@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define BASE 0
 #define SYM1 1
 #define SYM2 2
 #define NAV 3
@@ -32,6 +33,54 @@
             key-positions = <30 33>;
             bindings = <&mo SYM2>;
             #layers = <0 SYM1>;
+        };
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LPAR>;
+            layers = <BASE>;
+        };
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp RPAR>;
+            layers = <BASE>;
+        };
+        combo_lbkt {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LBKT>;
+            layers = <BASE>;
+        };
+        combo_rbkt {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp RBKT>;
+            layers = <BASE>;
+        };
+        combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LBRC>;
+            layers = <SYM1>;
+        };
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp RBRC>;
+            layers = <SYM1>;
+        };
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp LG(C)>;
+            layers = <BASE>;
+        };
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp LG(V)>;
+            layers = <BASE>;
         };
     };
 
@@ -81,16 +130,16 @@
         symbols1_layer {
             bindings = <
 
-       &kp EXCL     &kp AT       &kp GRAVE    &kp TILDE    &kp DLLR           &kp CARET    &kp STAR     &kp HASH     &none        &kp QUESTION
+       &kp EXCL     &kp AT       &kp GRAVE    &kp CARET    &kp DLLR           &kp QUESTION &kp LBKT     &kp RBKT     &kp LT       &kp GT
        &kp PIPE     &kp AMPS     &kp SQT      &kp MINUS    &kp EQUAL          &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
-       &kp BSLH     &kp PERCENT  &kp DQT      &kp UNDER    &kp PLUS           &sk MEH      &kp STAR     &kp HASH     &sk RALT     &kp BSLH
+       &kp BSLH     &kp PERCENT  &kp DQT      &kp UNDER    &kp PLUS           &sk MEH      &kp STAR     &kp HASH     &sk RALT     &kp TILDE
                                               &none        &none              &kp COLON    &mo SYM2
                 >;
         };
 
         symbols2_layer {
             bindings = <
-       &kp QUESTION &none        &kp LBRC     &kp RBRC     &none              &none        &none        &none        &none        &none
+       &none        &none        &kp LBRC     &kp RBRC     &none              &none        &none        &none        &none        &none
        &none        &none        &kp LPAR     &kp RPAR     &kp LT             &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
        &none        &none        &kp LBKT     &kp RBKT     &kp GT             &sk MEH      &none        &none        &sk RALT     &none
                                               &none        &none              &none        &none
