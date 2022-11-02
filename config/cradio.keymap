@@ -10,6 +10,7 @@
 #define NAV 2
 #define NUM 3
 #define FUNC 4
+#define LOCK 5
 
 #define HYPER LC(LS(LG(LALT)))
 #define MEH LC(LS(LALT))
@@ -78,6 +79,13 @@
             key-positions = <22 23>;
             bindings = <&kp LG(V)>;
             layers = <BASE>;
+        };
+
+        combo_unlock {
+            timeout-ms = <50>;
+            key-positions = <13 16>;
+            bindings = <&to BASE>;
+            layers = <LOCK>;
         };
     };
 
@@ -154,9 +162,18 @@
 
         func_layer {
             bindings = <
-       &none        &none        &none        &none        &none              &kp F10      &kp F7       &kp F8       &kp F9       &none
+       &to LOCK     &none        &none        &none        &none              &kp F10      &kp F7       &kp F8       &kp F9       &none
        &none        &none        &none        &none        &none              &kp F11      &kp F4       &kp F5       &kp F6       &none
        &bootloader  &none        &none        &none        &none              &kp F12      &kp F1       &kp F2       &kp F3       &bootloader
+                                              &none        &none              &none        &none
+                >;
+        };
+
+        lock_layer {
+            bindings = <
+       &none        &none        &none        &none        &none              &none        &none        &none        &none        &none
+       &none        &none        &none        &none        &none              &none        &none        &none        &none        &none
+       &none        &none        &none        &none        &none              &none        &none        &none        &none        &none
                                               &none        &none              &none        &none
                 >;
         };
