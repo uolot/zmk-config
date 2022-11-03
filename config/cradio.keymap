@@ -26,6 +26,19 @@
 
 / {
 
+    macros {
+        ZMK_MACRO(macro_parens,
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&kp LPAR &kp RPAR>;
+        )
+        ZMK_MACRO(macro_braces,
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&kp LBRC &kp RBRC>;
+        )
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -39,6 +52,12 @@
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp RPAR>;
+            layers = <BASE>;
+        };
+        combo_pars {
+            timeout-ms = <50>;
+            key-positions = <11 12 13>;
+            bindings = <&macro_parens>;
             layers = <BASE>;
         };
 
@@ -65,6 +84,12 @@
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp RBRC>;
+            layers = <SYMB>;
+        };
+        combo_braces {
+            timeout-ms = <50>;
+            key-positions = <11 12 13>;
+            bindings = <&macro_braces>;
             layers = <SYMB>;
         };
 
