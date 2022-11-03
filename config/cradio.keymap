@@ -9,8 +9,9 @@
 #define BASE 1
 #define SYMB 2
 #define NAV 3
-#define NUM 4
-#define FUNC 5
+#define PARS 4
+#define NUMP 5
+#define FUNC 6
 
 #define HYPER LC(LS(LG(LALT)))
 #define MEH LC(LS(LALT))
@@ -26,71 +27,14 @@
 
 / {
 
-    macros {
-        ZMK_MACRO(macro_parens,
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&kp LPAR &kp RPAR>;
-        )
-        ZMK_MACRO(macro_braces,
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&kp LBRC &kp RBRC>;
-        )
-    };
-
     combos {
         compatible = "zmk,combos";
 
-        combo_lpar {
+        combo_numpad {
             timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LPAR>;
+            key-positions = <30 31>;
+            bindings = <&tog NUMP>;
             layers = <BASE>;
-        };
-        combo_rpar {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp RPAR>;
-            layers = <BASE>;
-        };
-        combo_pars {
-            timeout-ms = <50>;
-            key-positions = <11 12 13>;
-            bindings = <&macro_parens>;
-            layers = <BASE>;
-        };
-
-        combo_lbkt {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&kp LBKT>;
-            layers = <BASE>;
-        };
-        combo_rbkt {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RBKT>;
-            layers = <BASE>;
-        };
-
-        combo_lbrc {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LBRC>;
-            layers = <SYMB>;
-        };
-        combo_rbrc {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp RBRC>;
-            layers = <SYMB>;
-        };
-        combo_braces {
-            timeout-ms = <50>;
-            key-positions = <11 12 13>;
-            bindings = <&macro_braces>;
-            layers = <SYMB>;
         };
 
         combo_copy {
@@ -122,27 +66,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp C_PLAY_PAUSE>, <&kp C_NEXT>, <&kp C_PREV>;
         };
-        td_misl: tap_dance_minus_slash {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MINUS_SLASH";
-            #binding-cells = <0>;
-            tapping-term-ms = <160>;
-            bindings = <&kp KP_MINUS>, <&kp KP_SLASH>;
-        };
-        td_plas: tap_dance_plus_asterisk {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_PLUS_ASTERISK";
-            #binding-cells = <0>;
-            tapping-term-ms = <160>;
-            bindings = <&kp KP_PLUS>, <&kp KP_ASTERISK>;
-        };
-        td_codo: tap_dance_colon_dot {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_COLON_DOT";
-            #binding-cells = <0>;
-            tapping-term-ms = <160>;
-            bindings = <&kp COLON>, <&kp DOT>;
-        };
     };
 
     keymap {
@@ -162,14 +85,13 @@
        &kp Q        &kp W        &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I        &kp O        &kp P
        &kp A        &kp S        &kp D        &kp F        &kp G              &kp H        &kp J        &kp K        &kp L        &kp RET
        &kp Z        &kp X        &kp C        &kp V        &kp B              &kp N        &kp M        &kp CMMA     &kp DOT      &kp FSLH
-                                              &lt SYMB ESC &lt NUM TAB      &mt LSHFT SEMI &lt NAV SPACE
+                                              &lt SYMB ESC &lt PARS TAB     &mt LSHFT SEMI &lt NAV SPACE
                 >;
         };
 
-        symbols1_layer {
+        symbols_layer {
             bindings = <
-
-       &kp EXCL     &kp AT       &kp GRAVE    &kp CARET    &kp DLLR           &kp QUESTION &kp LBKT     &kp RBKT     &kp LT       &kp GT
+       &kp EXCL     &kp AT       &kp GRAVE    &kp CARET    &kp DLLR           &kp QUESTION &none        &none        &none        &none
        &kp PIPE     &kp AMPS     &kp SQT      &kp MINUS    &kp EQUAL          &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
        &kp BSLH     &kp PERCENT  &kp DQT      &kp UNDER    &kp PLUS           &sk MEH      &kp STAR     &kp HASH     &sk RALT     &kp TILDE
                                               &none        &none              &kp COLON    &none
@@ -179,18 +101,28 @@
         navigation_layer {
             bindings = <
        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
-       &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp COLON
+       &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none
        &none        &sk RALT     &none        &none        &sk MEH            &kp DELETE   &kp BSPC     &kp C_VOL_DN &kp C_VOL_UP &td_media
                                               &none        &caps_word         &none        &none
                 >;
         };
 
+        parens_layer {
+            bindings = <
+       &sl FUNC     &kp LG(W)    &none        &kp LG(R)    &kp LG(T)          &none        &kp LBKT     &kp RBKT     &none        &none
+       &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &none        &kp LPAR     &kp RPAR     &kp LT       &kp GT
+       &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB  &sk MEH            &none        &kp LBRC     &kp RBRC     &none        &none
+                                              &none        &none              &none        &none
+                >;
+        };
+
+
         numpad_layer {
             bindings = <
-       &sl FUNC     &kp LG(W)    &none        &kp LG(R)    &kp LG(T)          &td_plas     &kp KP_N7    &kp KP_N8    &kp KP_N9    &none
-       &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &td_misl     &kp KP_N4    &kp KP_N5    &kp KP_N6    &none
-       &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB  &sk MEH            &kp KP_N1    &kp KP_N1    &kp KP_N2    &kp KP_N3    &none
-                                              &none        &none              &td_codo     &kp KP_N0
+       &tog NUMP    &none        &none        &none        &none              &kp CMMA     &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp EQUAL
+       &none        &none        &kp KP_PLUS  &kp KP_MINUS &none              &kp DOT      &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp RET
+       &none        &none     &kp KP_ASTERISK &kp KP_SLASH &none              &kp KP_N1    &kp KP_N1    &kp KP_N2    &kp KP_N3    &none
+                                              &none        &none              &kp COLON    &kp KP_N0
                 >;
         };
 
