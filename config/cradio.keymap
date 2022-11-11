@@ -54,7 +54,7 @@
 
         combo_numpad {
             timeout-ms = <50>;
-            key-positions = <22 23>;
+            key-positions = <2 3>;
             bindings = <&mo_tog NUMP NUMP>;
             layers = <BASE NUMP>;
         };
