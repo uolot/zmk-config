@@ -12,7 +12,8 @@
 #define NAV 3
 #define PARS 4
 #define NUMP 5
-#define FUNC 6
+#define NUMS 6
+#define FUNC 7
 
 #define HYPER LC(LS(LG(LALT)))
 #define MEH LC(LS(LALT))
@@ -20,6 +21,8 @@
 #define NEXTTAB LC(TAB)
 #define NAVBACK LG(LEFT)
 #define NAVFWD LG(RIGHT)
+
+#define KP_ASTR KP_ASTERISK
 
 &mt {
     //  flavor = "tap-preferred";
@@ -52,7 +55,7 @@
 
         combo_numpad {
             timeout-ms = <50>;
-            key-positions = <30 31>;
+            key-positions = <22 23>;
             bindings = <&mo_tog NUMP NUMP>;
             layers = <BASE NUMP>;
         };
@@ -149,10 +152,19 @@
 
         numpad_layer {
             bindings = <
-       &none        &none        &none        &none        &none              &kp CMMA     &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp EQUAL
-       &none        &none        &kp KP_PLUS  &kp KP_MINUS &none              &kp DOT      &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp RET
-       &none        &none     &kp KP_ASTERISK &kp KP_SLASH &none              &kp KP_N1    &kp KP_N1    &kp KP_N2    &kp KP_N3    &none
+       &tog NUMP    &none        &none        &none        &none              &kp PLUS     &kp KP_N7    &kp KP_N8    &kp KP_N9    &none
+       &none        &none        &none        &none        &none              &kp MINUS    &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp RET
+       &none        &mo NUMS     &none        &none        &none              &kp DOT      &kp KP_N1    &kp KP_N2    &kp KP_N3    &none
                                               &none        &none              &kp COLON    &kp KP_N0
+                >;
+        };
+
+        numsym_layer {
+            bindings = <
+       &none        &none        &none        &none        &none              &none        &none        &none        &none        &none
+       &none        &none        &none        &none        &none              &kp KP_MINUS &kp KP_PLUS  &kp KP_ASTR  &kp KP_SLASH &kp KP_EQUAL
+       &none        &none        &none        &none        &none              &none        &kp UNDER    &kp CMMA     &kp DOT      &none
+                                              &none        &none              &kp COLON    &none
                 >;
         };
 
