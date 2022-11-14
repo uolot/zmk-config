@@ -53,14 +53,14 @@
 
      BASE
         q           w          (e    ESC    r)          t                       y          (u    ESC    i)          o           p
-        a          (s          (d    RET   [f)   BSPC   g]                     [h    BSPC  (j]   RET    k)          l           ;
+        a          {s   BSPC   (d}   RET   [f)   TAB    g]                     [h    TAB   (j]   RET   {k)   BSPC   l}          ;
                    '---------- NUMP ---------'
         z          (x   CUT    [c)  COPY   {v]  PASTE   b}                      n           m           ,           .           /
                                             esc         tab                     sft         spc
 
      NUMP
         nump        .          (.    ESC    .)          .                       +          (7    ESC    8)          9           *
-        .          (.          (.    RET   [.)   BSPC   .]                     [-    BSPC  (4]   RET    5)          6           =
+        .          {.   BSPC   (.}   RET   [.)   TAB    .]                     [-    TAB   (4]   RET   {5)   BSPC   6}          =
                    '---------- NUMP ---------'
         .           .           .           .           .                      [.     ,    (1]    _     2)          3           /
                                             .           .                       :           0
@@ -91,13 +91,13 @@
 
         combo_backspace_left {
             timeout-ms = <50>;
-            key-positions = <13 14>;
+            key-positions = <11 12>;
             bindings = <&kp BSPC>;
             layers = <BASE NUMP>;
         };
         combo_backspace_right {
             timeout-ms = <50>;
-            key-positions = <15 16>;
+            key-positions = <17 18>;
             bindings = <&kp BSPC>;
             layers = <BASE NUMP>;
         };
@@ -112,6 +112,19 @@
             timeout-ms = <50>;
             key-positions = <6 7>;
             bindings = <&kp ESC>;
+            layers = <BASE NUMP>;
+        };
+
+        combo_tab_left {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp TAB>;
+            layers = <BASE NUMP>;
+        };
+        combo_tab_right {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp TAB>;
             layers = <BASE NUMP>;
         };
 
