@@ -54,7 +54,7 @@
      BASE
         q           w           e           r           t                       y           u           i           o           p
         a           s          (d    NUMP  [f)   RET    g]                     [h    DEL   (j]   BSPC   k)          l           ret
-        z          (x   COPY   [c)  PASTE   v]          b                       n           m           ,           .           /
+        z          (x   CUT    [c)  COPY   {v]  PASTE   b}                      n           m           ,           .           /
                                             esc         tab                     sft         spc
 
      NUMP
@@ -113,15 +113,21 @@
             layers = <NUMP>;
         };
 
-        combo_copy {
+        combo_cut {
             timeout-ms = <50>;
             key-positions = <21 22>;
+            bindings = <&kp LG(X)>;
+            layers = <BASE>;
+        };
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
             bindings = <&kp LG(C)>;
             layers = <BASE>;
         };
         combo_paste {
             timeout-ms = <50>;
-            key-positions = <22 23>;
+            key-positions = <23 24>;
             bindings = <&kp LG(V)>;
             layers = <BASE>;
         };
