@@ -199,8 +199,8 @@
         symbols_layer {
             bindings = <
        &kp EXCL     &kp AT       &kp GRAVE    &kp CARET    &kp DLLR           &kp QUESTION &none        &none        &none        &none
-       &kp PIPE     &kp AMPS     &kp SQT      &kp MINUS    &kp EQUAL          &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
-       &kp BSLH     &kp PERCENT  &kp DQT      &kp UNDER    &kp PLUS           &sk MEH      &kp STAR     &kp HASH     &sk RALT     &kp TILDE
+       &kp PIPE     &kp AMPS     &kp DQT      &kp MINUS    &kp EQUAL          &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
+       &kp BSLH     &kp PERCENT  &kp SQT      &kp UNDER    &kp PLUS           &sk MEH      &kp STAR     &kp HASH     &sk RALT     &kp TILDE
                                               &none        &none              &kp COLON    &none
                 >;
         };
