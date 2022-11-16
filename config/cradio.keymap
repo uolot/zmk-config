@@ -51,18 +51,18 @@
 
     /* COMBOS
 
-     BASE
-        q           w           e           r           t                       y           u           i           o           p
-        a          {s   BSPC   (d}   RET    f)          g                       h          (j    RET   {k)   BSPC   l}          ;
-                   '---------- NUMP ---------'
-        z          (x   CUT    [c)  COPY   {v]  PASTE   b}                      n           m           ,           .           /
-                                            esc         tab                     sft         spc
+     base_layer
 
-     NUMP
+        Q           W           E           R           T                       Y           U           I           O           P
+        A           S  <bspc>   D   <ret>   F   <nump>  G                       H           J   <ret>   K   <bspc>  L           ;
+        Z           X   <cut>   C  <copy>   V  <paste>  B                       N           M           ,           .           /
+                                           esc         tab                     sft         spc
+
+     numpad_layer
+
         nump        .           .           .           .                       +           7           8           9           *
-        .          {.   BSPC   (.}   RET    .)          .                       -          (4    RET   {5)   BSPC   6}          =
-                   '---------- NUMP ---------'
-        .           .           .           .           .                      [.     ,    (1]    _     2)          3           /
+        .           .  <bspc>   .   <ret>   .   <nump>  .                       -     _     4   <ret>   5   <bspc>  6           =
+        .           .           .           .           .                       .     ,     1   <spc>   2           3           /
                                             .           .                       :           0
     */
 
@@ -71,7 +71,7 @@
 
         combo_numpad {
             timeout-ms = <50>;
-            key-positions = <11 12 13>;
+            key-positions = <13 14>;
             bindings = <&mo_tog NUMP NUMP>;
             layers = <BASE NUMP>;
         };
@@ -104,7 +104,7 @@
 
         combo_nump_under {
             timeout-ms = <50>;
-            key-positions = <26 27>;
+            key-positions = <15 16>;
             bindings = <&kp UNDER>;
             layers = <NUMP>;
         };
@@ -112,6 +112,12 @@
             timeout-ms = <50>;
             key-positions = <25 26>;
             bindings = <&kp CMMA>;
+            layers = <NUMP>;
+        };
+        combo_nump_space {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp SPACE>;
             layers = <NUMP>;
         };
 
