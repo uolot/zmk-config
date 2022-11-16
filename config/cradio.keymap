@@ -10,7 +10,7 @@
 #define BASE 1
 #define SYMB 2
 #define NAV 3
-#define PARS 4
+#define MISC 4
 #define NUMP 5
 #define FUNC 6
 
@@ -166,15 +166,15 @@
        &kp Q        &kp W        &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I        &kp O        &kp P
        &kp A        &kp S        &kp D        &kp F        &kp G              &kp H        &kp J        &kp K        &kp L        &kp RET
        &kp Z        &kp X        &kp C        &kp V        &kp B              &kp N        &kp M        &kp CMMA     &kp DOT      &kp FSLH
-                                              &lt SYMB ESC &lt PARS TAB     &mt LSHFT SEMI &lt NAV SPACE
+                                              &lt SYMB ESC &lt MISC TAB     &mt LSHFT SEMI &lt NAV SPACE
                 >;
         };
 
         symbols_layer {
             bindings = <
-       &kp EXCL     &kp AT       &kp GRAVE    &kp CARET    &kp DLLR           &kp QUESTION &none        &none        &none        &none
-       &kp PIPE     &kp AMPS     &kp DQT      &kp MINUS    &kp EQUAL          &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
-       &kp BSLH     &kp PERCENT  &kp SQT      &kp UNDER    &kp PLUS           &sk MEH      &kp STAR     &kp HASH     &sk RALT     &kp TILDE
+       &kp EXCL     &kp AT       &kp GRAVE    &kp CARET    &kp DLLR           &kp QUESTION &kp LBKT     &kp RBKT     &none        &none
+       &kp PIPE     &kp AMPS     &kp DQT      &kp MINUS    &kp EQUAL          &kp STAR     &kp LPAR     &kp RPAR     &kp LT       &kp GT
+       &kp BSLH     &kp PERCENT  &kp SQT      &kp UNDER    &kp PLUS           &kp HASH     &kp LBRC     &kp RBRC     &none        &kp TILDE
                                               &none        &none              &kp COLON    &none
                 >;
         };
@@ -188,11 +188,11 @@
                 >;
         };
 
-        parens_layer {
+        misc_layer {
             bindings = <
-       &sl FUNC     &kp LG(W)    &none        &kp LG(R)    &kp LG(T)          &none        &kp LBKT     &kp RBKT     &none        &none
-       &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &none        &kp LPAR     &kp RPAR     &kp LT       &kp GT
-       &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB  &sk MEH            &none        &kp LBRC     &kp RBRC     &none        &none
+       &sl FUNC     &kp LG(W)    &none        &kp LG(R)    &kp LG(T)          &none        &none        &none        &none        &none
+       &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
+       &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB  &sk MEH            &sk MEH      &none        &none        &sk RALT     &none
                                               &none        &none              &none        &none
                 >;
         };
