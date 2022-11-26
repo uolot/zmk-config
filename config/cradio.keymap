@@ -77,7 +77,7 @@
         };
 
         combo_enter_left {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <12 13>;
             bindings = <&kp RET>;
             layers = <BASE NUMP>;
