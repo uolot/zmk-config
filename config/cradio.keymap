@@ -55,7 +55,8 @@
 
         Q           W           E           R           T                       Y           U           I           O           P
         A           S  <bspc>   D   <ret>   F   <nump>  G                       H           J   <ret>   K   <bspc>  L           ;
-        Z           X   <cut>   C  <copy>   V  <paste>  B                       N           M           ,           .           /
+        Z           X   <cut>   C  <copy>   V  <paste>  B                       N           M   <vol->  ,   <vol+>  .           /
+                                                                                            '-----    <mute>   -----'
                                            esc         tab                     sft         spc
 
      numpad_layer
@@ -140,12 +141,31 @@
             layers = <BASE>;
         };
 
-        combo_mute {
+        combo_mute_nav {
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp C_MUTE>;
             layers = <NAV>;
         };
+        combo_mute_base {
+            timeout-ms = <50>;
+            key-positions = <26 27 28>;
+            bindings = <&kp C_MUTE>;
+            layers = <BASE>;
+        };
+        combo_vol_down {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp C_VOL_DN>;
+            layers = <BASE>;
+        };
+        combo_vol_up {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp C_VOL_UP>;
+            layers = <BASE>;
+        };
+
 
         combo_unlock {
             timeout-ms = <500>;
