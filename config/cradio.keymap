@@ -219,7 +219,7 @@
        &sl FUNC     &kp LG(W)    &none        &kp LG(R)    &kp LG(T)          &none        &none        &none        &none        &none
        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
        &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB  &sk MEH            &sk MEH      &none        &none        &sk RALT     &none
-                                              &none        &none              &none        &none
+                                              &none        &none              &kp COLON    &none
                 >;
         };
 
