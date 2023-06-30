@@ -121,6 +121,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
     combos {
         compatible = "zmk,combos";
 
+        /*
         combo_numpad {
             timeout-ms = <30>;
             global-quick-tap-ms = <75>;
@@ -158,6 +159,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
             bindings = <&kp BSPC>;
             layers = <BASE NUMP>;
         };
+        */
 
         combo_nump_under {
             timeout-ms = <50>;
