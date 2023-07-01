@@ -311,7 +311,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
             bindings = <
        &kp EXCL       &kp AT         &kp GRAVE      &kp CARET        &kp DLLR             &kp QUESTION    &kp LBKT        &kp RBKT        &none        &none
        &hml LALT PIPE &hml LGUI AMPS &hml LSHFT DQT &hml LCTRL MINUS &hml HYPER EQUAL     &hmr HYPER STAR &hmr LCTRL LPAR &hmr LSHFT RPAR &hmr LGUI LT &hml LALT GT
-       &kp BSLH       &kp PERCENT    &kp SQT        &hml RALT UNDER  &kp PLUS             &kp HASH        &hmr RALT LBRC   &kp RBRC       &none        &kp TILDE
+       &kp BSLH       &kp PERCENT    &kp SQT        &hml RALT UNDER  &kp PLUS             &kp HASH        &hmr RALT LBRC  &kp RBRC        &none        &kp TILDE
                                                     &none            &none                &kp COLON       &none
                 >;
         };
@@ -327,10 +327,10 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
 
         misc_layer {
             bindings = <
-       &sl FUNC     &kp LG(W)    &kp LG(L)    &kp LG(R)    &kp LG(T)          &none        &none        &none        &none        &none
-       &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &kp LG(LS(T))      &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
-       &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB  &kp LG(N)          &sk MEH      &sk RALT     &none        &none        &none
-                                              &none        &none              &kp COLON    &none
+       &sl FUNC     &kp LG(W)    &kp LG(L)    &kp LG(R)     &kp LG(T)          &none        &none        &none        &none        &none
+       &none        &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(T))      &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
+       &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB   &kp LG(N)          &sk MEH      &sk RALT     &none        &none        &none
+                                              &none         &none              &kp COLON    &none
                 >;
         };
 
