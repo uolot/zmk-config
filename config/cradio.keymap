@@ -354,7 +354,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
 
         func_layer {
             bindings = <
-       &none        &out OUT_USB &out OUT_BLE &none        &bt BT_CLR         &kp F10      &kp F7       &kp F8       &kp F9       &none
+       &sl BASE     &out OUT_USB &out OUT_BLE &none        &bt BT_CLR         &kp F10      &kp F7       &kp F8       &kp F9       &none
        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp F11      &kp F4       &kp F5       &kp F6       &none
        &bootloader  &none        &none        &none        &none              &kp F12      &kp F1       &kp F2       &kp F3       &bootloader
                                               &none        &none              &none        &none
