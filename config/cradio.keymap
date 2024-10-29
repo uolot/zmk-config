@@ -127,6 +127,23 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
     combos {
         compatible = "zmk,combos";
 
+        // reset on ASDF and JKL;
+        sys_reset_left {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <75>;
+            key-positions = <10 11 12 13>;
+            bindings = <&sys_reset>;
+            layers = <BASE SYMB NAV MISC NUMP FUNC>;
+        };
+
+        sys_reset_right {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <75>;
+            key-positions = <16 17 18 19>;
+            bindings = <&sys_reset>;
+            layers = <BASE SYMB NAV MISC NUMP FUNC>;
+        };
+
         combo_numpad {
             timeout-ms = <30>;
             require-prior-idle-ms = <75>;
