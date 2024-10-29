@@ -144,6 +144,23 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
             layers = <BASE SYMB NAV MISC NUMP FUNC>;
         };
 
+        // soft off on QWER and UIOP
+        soft_off_left {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <75>;
+            key-positions = <0 1 2 3>;
+            bindings = <&soft_off>;
+            layers = <BASE SYMB NAV MISC NUMP FUNC>;
+        };
+
+        soft_off_right {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <75>;
+            key-positions = <6 7 8 9>;
+            bindings = <&soft_off>;
+            layers = <BASE SYMB NAV MISC NUMP FUNC>;
+        };
+
         combo_numpad {
             timeout-ms = <30>;
             require-prior-idle-ms = <75>;
