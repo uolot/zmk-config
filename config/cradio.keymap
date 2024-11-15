@@ -383,7 +383,7 @@ ZMK_BEHAVIOR(mac_pgup, macro,
 
         misc_layer {
             bindings = <
-       &sl FUNC     &kp LG(W)    &kp LG(L)    &kp LG(R)     &kp LG(T)          &kp C_BRI_UP &kp C_BRI_DN &none        &none        &kp GLOBE
+       &sl FUNC     &kp LG(W)    &kp LG(L)    &kp LG(R)     &kp LG(T)          &kp C_BRI_DN &kp C_BRI_UP &none        &none        &kp GLOBE
        &kp HOME     &kp END      &mac_pgup    &mac_pgdn     &kp LG(LS(T))      &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
        &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB   &kp LG(N)          &sk MEH      &sk RALT     &none        &none        &kp K_MENU
                                               &none         &none              &kp COLON    &none
