@@ -1,0 +1,282 @@
+layout: {qmk_keyboard: ferris_rotated}
+layers:
+  base:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: Alt}
+  - {t: S, h: Cmd}
+  - {t: D, h: Sft}
+  - {t: F, h: Ctl}
+  - {t: G, h: Hyper}
+  - {t: H, h: Hyper}
+  - {t: J, h: Ctl}
+  - {t: K, h: Sft}
+  - {t: L, h: Cmd}
+  - {t: RET, h: Alt}
+  - Z
+  - X
+  - C
+  - {t: V, h: AltGr}
+  - {t: B, h: Meh}
+  - {t: N, h: Meh}
+  - {t: M, h: AltGr}
+  - ','
+  - .
+  - /
+  - {t: ESC, h: symbols}
+  - {t: TAB, h: misc}
+  - {t: ;, h: LSHFT}
+  - {t: SPACE, h: navigation}
+  symbols:
+  - '!'
+  - '@'
+  - '`'
+  - ^
+  - $
+  - '?'
+  - '['
+  - ']'
+  - ''
+  - ''
+  - {t: '|', h: Alt}
+  - {t: '&', h: Cmd}
+  - {t: '"', h: Sft}
+  - {t: '-', h: Ctl}
+  - {t: '=', h: Hyper}
+  - {t: '*', h: Hyper}
+  - {t: (, h: Ctl}
+  - {t: ), h: Sft}
+  - {t: <, h: Cmd}
+  - {t: '>', h: Alt}
+  - \
+  - '%'
+  - ''''
+  - {t: _, h: AltGr}
+  - +
+  - '#'
+  - {t: '{', h: AltGr}
+  - '}'
+  - ''
+  - '~'
+  - {type: held}
+  - ''
+  - ':'
+  - ''
+  navigation:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: Alt, h: sticky}
+  - {t: Cmd, h: sticky}
+  - {t: Sft, h: sticky}
+  - {t: Ctl, h: sticky}
+  - {t: Hyper, h: sticky}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - RET
+  - ''
+  - ''
+  - ''
+  - {t: AltGr, h: sticky}
+  - {t: Meh, h: sticky}
+  - DELETE
+  - BSPC
+  - VOL DN
+  - VOL UP
+  - ''
+  - 'Caps
+
+    lock'
+  - 'Caps
+
+    word'
+  - ''
+  - {type: held}
+  misc:
+  - {t: func, h: sticky}
+  - Cmd+W
+  - Cmd+L
+  - Cmd+R
+  - Cmd+T
+  - BRI DN
+  - BRI UP
+  - ''
+  - ''
+  - GLOBE
+  - HOME
+  - END
+  - PG UP
+  - PG DN
+  - Cmd+Sft+T
+  - {t: Hyper, h: sticky}
+  - {t: Ctl, h: sticky}
+  - {t: Sft, h: sticky}
+  - {t: Cmd, h: sticky}
+  - {t: Alt, h: sticky}
+  - Cmd+LEFT
+  - Cmd+RIGHT
+  - Ctl+Sft+TAB
+  - Ctl+TAB
+  - Cmd+N
+  - {t: Meh, h: sticky}
+  - {t: AltGr, h: sticky}
+  - ''
+  - ''
+  - MENU
+  - ''
+  - {type: held}
+  - ':'
+  - ''
+  numpad:
+  - {t: numpad, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - KP PLUS
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP ASTERISK
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - {type: held}
+  - KP MINUS
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP EQUAL
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - .
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP SLASH
+  - ''
+  - ''
+  - ':'
+  - KP 0
+  func:
+  - {t: base, h: sticky, type: held}
+  - OUT USB
+  - OUT BLE
+  - ''
+  - BT CLR
+  - F10
+  - F7
+  - F8
+  - F9
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - F11
+  - F4
+  - F5
+  - F6
+  - ''
+  - 'Boot
+
+    loader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - F12
+  - F1
+  - F2
+  - F3
+  - 'Boot
+
+    loader'
+  - ''
+  - {type: held}
+  - ''
+  - ''
+combos:
+- p: [10, 11, 12, 13]
+  k: Reset
+  l: [base, symbols, navigation, misc, numpad, func]
+- p: [16, 17, 18, 19]
+  k: Reset
+  l: [base, symbols, navigation, misc, numpad, func]
+- p: [0, 1, 2, 3]
+  k: 'Soft
+
+    off'
+  l: [base, symbols, navigation, misc, numpad, func]
+- p: [6, 7, 8, 9]
+  k: 'Soft
+
+    off'
+  l: [base, symbols, navigation, misc, numpad, func]
+- p: [13, 14]
+  k: {t: numpad, h: numpad}
+  l: [base, numpad]
+- p: [12, 13]
+  k: RET
+  l: [base, numpad]
+- p: [16, 17]
+  k: RET
+  l: [base, numpad]
+- p: [11, 12]
+  k: BSPC
+  l: [base, numpad]
+- p: [17, 18]
+  k: BSPC
+  l: [base, numpad]
+- p: [21, 22]
+  k: Cmd+X
+  l: [base]
+- p: [22, 23]
+  k: Cmd+C
+  l: [base]
+- p: [23, 24]
+  k: Cmd+V
+  l: [base]
+- p: [21, 22, 23]
+  k: Cmd+A
+  l: [base]
+- p: [26, 27, 28]
+  k: MUTE
+  l: [base]
+- p: [26, 27]
+  k: VOL DN
+  l: [base]
+- p: [27, 28]
+  k: VOL UP
+  l: [base]
+- p: [5, 6]
+  k: PREV
+  l: [base]
+- p: [6, 7]
+  k: PLAY PAUSE
+  l: [base]
+- p: [7, 8]
+  k: NEXT
+  l: [base]
