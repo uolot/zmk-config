@@ -81,6 +81,20 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
     // hold-trigger-on-release;             // delay positional check until key-release
 )
 
+/* 30 times DOWN arrow */
+ZMK_BEHAVIOR(mac_pgdn, macro,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
+)
+
+/* 30 times UP arrow */
+ZMK_BEHAVIOR(mac_pgup, macro,
+    wait-ms = <30>;
+    tap-ms = <30>;
+    bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP>;
+)
+
 &mt {
     //  flavor = "tap-preferred";
     tapping_term_ms = <150>;
@@ -370,7 +384,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         misc_layer {
             bindings = <
        &sl FUNC     &kp LG(W)    &kp LG(L)    &kp LG(R)     &kp LG(T)          &none        &none        &none        &none        &none
-       &none        &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(T))      &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
+       &kp HOME     &kp END      &mac_pgup    &mac_pgdn     &kp LG(LS(T))      &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
        &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB   &kp LG(N)          &sk MEH      &sk RALT     &none        &none        &none
                                               &none         &none              &kp COLON    &none
                 >;
