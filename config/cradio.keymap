@@ -73,9 +73,9 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
     // hold-trigger-on-release;             // delay positional check until key-release
 )
 
-/* left-hand HRMs */
+/* hold tap */
 ZMK_BEHAVIOR(ht, hold_tap,
-    flavor = "hold-preferred";
+    flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <0>;                // repeat on tap-into-hold
     require-prior-idle-ms = <0>;         // requires PR #1387
