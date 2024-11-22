@@ -81,6 +81,15 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
     // hold-trigger-on-release;             // delay positional check until key-release
 )
 
+/* left-hand HRMs */
+ZMK_BEHAVIOR(ht, hold_tap,
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <0>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <0>;         // requires PR #1387
+    bindings = <&kp>, <&kp>;
+)
+
 &mt {
     //  flavor = "tap-preferred";
     tapping_term_ms = <150>;
@@ -298,7 +307,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
 
         base_layer {
             bindings = <
-       &kp Q        &kp W        &kp E          &kp R        &kp T              &kp Y        &kp U        &kp I          &kp O       &kp P
+       &ht N1 Q     &ht N2 W     &ht N3 E       &ht N4 R     &ht N5 T           &ht N6 Y     &ht N7 U     &ht N8 I       &ht N9 O    &ht N0 P
        &hml LALT A  &hml LGUI S  &hml_s LSHFT D &hml LCTRL F &hml HYPER G       &hmr HYPER H &hmr LCTRL J &hmr_s LSHFT K &hmr LGUI L &hmr LALT RET
        &kp Z        &kp X        &kp C          &hml RALT V  &hml MEH B         &hmr MEH N   &hmr RALT M  &kp COMMA       &kp DOT     &kp FSLH
                                                 &lt SYMB ESC &lt MISC TAB     &mt LSHFT SEMI &lt NAV SPACE
