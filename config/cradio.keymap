@@ -97,35 +97,7 @@ ZMK_BEHAVIOR(ht, hold_tap,
             tapping-term-ms = <200>;
             bindings = <&mo>, <&tog>;
         };
-
-        /*
-        td_media: tap_dance_media {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp C_PLAY_PAUSE>, <&kp C_NEXT>, <&kp C_PREV>;
-        };
-        */
     };
-
-    /* COMBOS
-
-     base_layer
-
-        Q           W           E           R           T                       Y   <prev>  U   <play>  I   <next>  O           P
-        A           S  <bspc>   D   <ret>   F   <nump>  G                       H           J   <ret>   K   <bspc>  L           ;
-        Z           X   <cut>   C  <copy>   V  <paste>  B                       N           M   <vol->  ,   <vol+>  .           /
-                    '-----  <sel all>  -----'
-                                                                                            '-----    <mute>   -----'
-                                           esc         tab                     sft         spc
-
-     numpad_layer
-
-        nump        .           .           .           .                       +           7           8           9           *
-        .           .  <bspc>   .   <ret>   .   <nump>  .                       -     _     4   <ret>   5   <bspc>  6           =
-        .           . <c-left>  . <c-right> .           .                       .     ,     1   <spc>   2           3           /
-                                            .           .                       :           0
-    */
 
     combos {
         compatible = "zmk,combos";
