@@ -1,16 +1,16 @@
 layout: {qmk_keyboard: ferris_rotated}
 layers:
   base:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
+  - {t: Q, h: '1'}
+  - {t: W, h: '2'}
+  - {t: E, h: '3'}
+  - {t: R, h: '4'}
+  - {t: T, h: '5'}
+  - {t: Y, h: '6'}
+  - {t: U, h: '7'}
+  - {t: I, h: '8'}
+  - {t: O, h: '9'}
+  - {t: P, h: '0'}
   - {t: A, h: Alt}
   - {t: S, h: Cmd}
   - {t: D, h: Sft}
@@ -98,8 +98,8 @@ layers:
   - {t: Meh, h: sticky}
   - DELETE
   - BSPC
-  - VOL DN
-  - VOL UP
+  - ''
+  - ''
   - ''
   - 'Caps
 
@@ -157,7 +157,7 @@ layers:
   - KP ASTERISK
   - ''
   - ''
-  - ''
+  - ','
   - {type: held}
   - {type: held}
   - KP MINUS
@@ -175,8 +175,8 @@ layers:
   - KP 2
   - KP 3
   - KP SLASH
-  - ''
-  - ''
+  - _
+  - SPACE
   - ':'
   - KP 0
   func:
