@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: ferris_rotated}
+layout: {zmk_keyboard: cradio}
 layers:
   base:
   - {t: Q, h: '1'}
@@ -67,7 +67,9 @@ layers:
   - ''
   - '~'
   - {type: held}
-  - ''
+  - 'Caps
+
+    lock'
   - ':'
   - ''
   navigation:
@@ -101,9 +103,7 @@ layers:
   - ''
   - ''
   - ''
-  - 'Caps
-
-    lock'
+  - ''
   - 'Caps
 
     word'
@@ -115,35 +115,35 @@ layers:
   - Cmd+L
   - Cmd+R
   - Cmd+T
-  - BRI DN
-  - BRI UP
   - ''
+  - '&msc SCRL_LEFT'
+  - '&mmv MOVE_UP'
+  - '&msc SCRL_RIGHT'
   - ''
-  - GLOBE
-  - HOME
-  - END
   - PG UP
   - PG DN
+  - HOME
+  - END
   - Cmd+Sft+T
-  - {t: Hyper, h: sticky}
-  - {t: Ctl, h: sticky}
-  - {t: Sft, h: sticky}
-  - {t: Cmd, h: sticky}
-  - {t: Alt, h: sticky}
-  - Cmd+LEFT
-  - Cmd+RIGHT
+  - ''
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - ''
+  - Cmd+[
+  - Cmd+]
   - Ctl+Sft+TAB
   - Ctl+TAB
   - Cmd+N
-  - {t: Meh, h: sticky}
-  - {t: AltGr, h: sticky}
   - ''
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&mkp RCLK'
   - ''
-  - MENU
   - ''
   - {type: held}
-  - ':'
-  - ''
+  - '&mkp LCLK'
+  - '&mkp MCLK'
   numpad:
   - {t: numpad, h: toggle}
   - ''
@@ -279,4 +279,10 @@ combos:
   l: [base]
 - p: [7, 8]
   k: NEXT
+  l: [base]
+- p: [3, 2]
+  k: BRI DN
+  l: [base]
+- p: [2, 1]
+  k: BRI UP
   l: [base]
