@@ -251,14 +251,14 @@ ZMK_BEHAVIOR(ht, hold_tap,
         combo_brightness_down {
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
-            key-positions = <LT1 LT2>;
+            key-positions = <LT2 LT3>;
             bindings = <&kp C_BRI_DN>;
             layers = <BASE>;
         };
         combo_brightness_up {
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
-            key-positions = <LT2 LT3>;
+            key-positions = <LT1 LT2>;
             bindings = <&kp C_BRI_UP>;
             layers = <BASE>;
         };
