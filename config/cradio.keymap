@@ -303,7 +303,7 @@ ZMK_BEHAVIOR(ht, hold_tap,
         misc_layer {
             bindings = <
        &sl FUNC     &kp LG(W)    &kp LG(L)    &kp LG(R)     &kp LG(T)          &kp C_BRI_DN &kp C_BRI_UP &none        &none        &kp GLOBE
-       &kp HOME     &kp END      &kp PG_UP    &kp PG_DN     &kp LG(LS(T))      &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
+       &kp PG_UP    &kp PG_DN     &kp HOME     &kp END      &kp LG(LS(T))      &sk HYPER    &sk LCTRL    &sk LSHIFT   &sk LGUI     &sk LALT
        &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB   &kp LG(N)          &sk MEH      &sk RALT     &none        &none        &kp K_MENU
                                               &none         &none              &kp COLON    &none
                 >;
