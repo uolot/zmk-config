@@ -19,6 +19,7 @@
 #define MISC 3
 #define NUMP 4
 #define FUNC 5
+#define MOUS 6
 
 #define HYPER LC(LS(LG(LALT)))
 #define MEH LC(LS(LALT))
@@ -322,7 +323,7 @@ ZMK_BEHAVIOR(ht, hold_tap,
         misc_layer {
             bindings = <
        &sl FUNC     &kp LG(W)    &kp LG(L)    &kp LG(R)     &kp LG(T)          &none           &mkp SCRL_LEFT  &mkp SCRL_RIGHT  &none           &none
-       &kp PG_UP    &kp PG_DN    &kp HOME     &kp END       &kp LG(LS(T))      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT &mkp RCLK
+       &kp PG_UP    &kp PG_DN    &kp HOME     &lt MOUS END  &kp LG(LS(T))      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT &mkp RCLK
        &kp NAVBACK  &kp NAVFWD   &kp PREVTAB  &kp NEXTTAB   &kp LG(N)          &none           &msc SCRL_DOWN  &msc SCRL_UP     &none           &none
                                               &none         &none              &mkp LCLK  &mkp MCLK
                 >;
@@ -345,6 +346,16 @@ ZMK_BEHAVIOR(ht, hold_tap,
        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp F11      &kp F4       &kp F5       &kp F6       &none
        &bootloader  &none        &none        &none        &none              &kp F12      &kp F1       &kp F2       &kp F3       &bootloader
                                               &none        &none              &none        &none
+                >;
+        };
+
+        // MOUS
+        mouse_layer {
+            bindings = <
+       &none  &none  &none  &none  &none        &none              &none              &none             &none             &none
+       &none  &none  &none  &none  &none        &mmv MOVE_X(-400)  &mmv MOVE_Y(400)   &mmv MOVE_Y(-400) &mmv MOVE_X(400)  &mkp RCLK
+       &none  &none  &none  &none  &none        &none              &none              &none             &none             &none
+                            &none  &none        &mkp LCLK          &mkp MCLK
                 >;
         };
 
