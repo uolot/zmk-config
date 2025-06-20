@@ -20,8 +20,8 @@
 #define MEH LC(LS(LALT))
 #define PREVTAB LC(LS(TAB))
 #define NEXTTAB LC(TAB)
-#define NAVBACK LG(LEFT)
-#define NAVFWD LG(RIGHT)
+#define NAVBACK LG(LBKT)
+#define NAVFWD LG(RBKT)
 
 #define KP_ASTR KP_ASTERISK
 
