@@ -323,10 +323,10 @@ ZMK_BEHAVIOR(ht, hold_tap,
         // MISC
         misc_layer {
             bindings = <
-       &sl FUNC     &kp LG(W)    &kp LG(L)       &kp LG(R)      &kp LG(T)          &none           &mkp SCRL_LEFT  &mkp SCRL_RIGHT  &none           &none
-       &kp PG_UP    &kp PG_DN    &lt MOUS2 HOME  &lt MOUS1 END  &kp LG(LS(T))      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT &mkp RCLK
-       &kp NAVBACK  &kp NAVFWD   &kp PREVTAB     &kp NEXTTAB    &kp LG(N)          &none           &msc SCRL_UP    &msc SCRL_DOWN   &none           &none
-                                                 &none          &none              &mkp LCLK  &mkp MCLK
+       &sl FUNC    &kp LG(W)  &kp LG(L)       &kp LG(R)       &kp LG(T)          &none           &mkp SCRL_LEFT  &mkp SCRL_RIGHT  &none           &none
+       &kp HOME    &kp END    &lt MOUS2 PG_UP &lt MOUS1 PG_DN &kp LG(LS(T))      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT &mkp RCLK
+       &kp NAVBACK &kp NAVFWD &kp PREVTAB     &kp NEXTTAB     &kp LG(N)          &none           &msc SCRL_UP    &msc SCRL_DOWN   &none           &none
+                                              &none           &none              &mkp LCLK       &mkp MCLK
                 >;
         };
 
