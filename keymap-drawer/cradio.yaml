@@ -116,29 +116,29 @@ layers:
   - Cmd+R
   - Cmd+T
   - ''
-  - '&msc SCRL_LEFT'
-  - '&mmv MOVE_UP'
-  - '&msc SCRL_RIGHT'
+  - '&mkp SCRL_LEFT'
+  - '&mkp SCRL_RIGHT'
   - ''
-  - PG UP
-  - PG DN
+  - ''
   - HOME
   - END
+  - {t: PG UP, h: mouse2}
+  - {t: PG DN, h: mouse1}
   - Cmd+Sft+T
-  - ''
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
   - '&mmv MOVE_RIGHT'
-  - ''
+  - '&mkp RCLK'
   - Cmd+[
   - Cmd+]
   - Ctl+Sft+TAB
   - Ctl+TAB
   - Cmd+N
   - ''
-  - '&msc SCRL_DOWN'
   - '&msc SCRL_UP'
-  - '&mkp RCLK'
+  - '&msc SCRL_DOWN'
+  - ''
   - ''
   - ''
   - {type: held}
@@ -218,6 +218,76 @@ layers:
   - {type: held}
   - ''
   - ''
+  mouse1:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - '&mmv MOVE_X(-400)'
+  - '&mmv MOVE_Y(400)'
+  - '&mmv MOVE_Y(-400)'
+  - '&mmv MOVE_X(400)'
+  - '&mkp RCLK'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  mouse2:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - '&mmv MOVE_X(-4000)'
+  - '&mmv MOVE_Y(3500)'
+  - '&mmv MOVE_Y(-3500)'
+  - '&mmv MOVE_X(4000)'
+  - '&mkp RCLK'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - '&mkp LCLK'
+  - '&mkp MCLK'
 combos:
 - p: [10, 11, 12, 13]
   k: Reset
@@ -280,9 +350,9 @@ combos:
 - p: [7, 8]
   k: NEXT
   l: [base]
-- p: [3, 2]
+- p: [2, 1]
   k: BRI DN
   l: [base]
-- p: [2, 1]
+- p: [3, 2]
   k: BRI UP
   l: [base]
