@@ -1,16 +1,16 @@
 layout: {zmk_keyboard: cradio}
 layers:
   base:
-  - {t: Q, h: '1'}
-  - {t: W, h: '2'}
-  - {t: E, h: '3'}
-  - {t: R, h: '4'}
-  - {t: T, h: '5'}
-  - {t: Y, h: '6'}
-  - {t: U, h: '7'}
-  - {t: I, h: '8'}
-  - {t: O, h: '9'}
-  - {t: P, h: '0'}
+  - Q
+  - W
+  - E
+  - R
+  - {t: T, h: danish}
+  - {t: Y, h: danish}
+  - U
+  - I
+  - O
+  - P
   - {t: A, h: Alt}
   - {t: S, h: Cmd}
   - {t: D, h: Sft}
@@ -46,30 +46,28 @@ layers:
   - ']'
   - ''
   - ''
-  - {t: '|', h: Alt}
-  - {t: '&', h: Cmd}
-  - {t: '"', h: Sft}
-  - {t: '-', h: Ctl}
-  - {t: '=', h: Hyper}
-  - {t: '*', h: Hyper}
-  - {t: (, h: Ctl}
-  - {t: ), h: Sft}
-  - {t: <, h: Cmd}
-  - {t: '>', h: Alt}
+  - '|'
+  - '&'
+  - '"'
+  - '-'
+  - '='
+  - '*'
+  - (
+  - )
+  - <
+  - '>'
   - \
   - '%'
   - ''''
-  - {t: _, h: AltGr}
+  - _
   - +
   - '#'
-  - {t: '{', h: AltGr}
+  - '{'
   - '}'
   - ''
   - '~'
   - {type: held}
-  - 'Caps
-
-    lock'
+  - ''
   - ':'
   - ''
   navigation:
@@ -103,7 +101,9 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - 'Caps
+
+    lock'
   - 'Caps
 
     word'
@@ -115,34 +115,34 @@ layers:
   - Cmd+L
   - Cmd+R
   - Cmd+T
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_RIGHT'
   - ''
-  - '&mkp SCRL_LEFT'
-  - '&mkp SCRL_RIGHT'
-  - ''
-  - ''
+  - Cmd+[
+  - Cmd+]
   - HOME
   - END
-  - {t: PG UP, h: mouse2}
-  - {t: PG DN, h: mouse1}
   - Cmd+Sft+T
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_UP'
   - '&mmv MOVE_RIGHT'
-  - '&mkp RCLK'
-  - Cmd+[
-  - Cmd+]
+  - '&mkp LCLK'
+  - ''
+  - ''
   - Ctl+Sft+TAB
   - Ctl+TAB
   - Cmd+N
   - ''
-  - '&msc SCRL_UP'
-  - '&msc SCRL_DOWN'
+  - PG DN
+  - PG UP
   - ''
   - ''
   - ''
   - {type: held}
-  - '&mkp LCLK'
+  - '&mkp RCLK'
   - '&mkp MCLK'
   numpad:
   - {t: numpad, h: toggle}
@@ -218,62 +218,18 @@ layers:
   - {type: held}
   - ''
   - ''
-  mouse1:
+  danish:
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - '&mmv MOVE_X(-400)'
-  - '&mmv MOVE_Y(400)'
-  - '&mmv MOVE_Y(-400)'
-  - '&mmv MOVE_X(400)'
-  - '&mkp RCLK'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - '&mkp LCLK'
-  - '&mkp MCLK'
-  mouse2:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: '&da_ae_lower', s: '&da_ae_upper'}
   - ''
   - {type: held}
   - ''
   - ''
-  - '&mmv MOVE_X(-4000)'
-  - '&mmv MOVE_Y(3500)'
-  - '&mmv MOVE_Y(-3500)'
-  - '&mmv MOVE_X(4000)'
-  - '&mkp RCLK'
+  - ''
+  - {t: '&da_oe_lower', s: '&da_oe_upper'}
+  - ''
+  - {t: '&da_aa_lower', s: '&da_aa_upper'}
   - ''
   - ''
   - ''
@@ -285,9 +241,18 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
-  - '&mkp LCLK'
-  - '&mkp MCLK'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
 combos:
 - p: [10, 11, 12, 13]
   k: Reset
