@@ -110,7 +110,8 @@ ZMK_BEHAVIOR(ht, hold_tap,
 
 /* fast layer-tap for ESC/SYMB */
 ZMK_BEHAVIOR(lt_fast, hold_tap,
-    flavor = "hold-preferred";
+    // TODO: try "balanced" if "tap-preferred" leads to accidental ESC presses
+    flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <150>;
     bindings = <&mo>, <&kp>;
