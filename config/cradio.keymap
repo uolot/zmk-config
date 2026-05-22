@@ -88,6 +88,14 @@ ZMK_BEHAVIOR(ht, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
+/* fast layer-tap for ESC/SYMB */
+ZMK_BEHAVIOR(lt_fast, hold_tap,
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;
+    bindings = <&mo>, <&kp>;
+)
+
 &mt {
     //  flavor = "tap-preferred";
     tapping_term_ms = <150>;
@@ -293,10 +301,10 @@ ZMK_BEHAVIOR(ht, hold_tap,
         // BASE
         base_layer {
             bindings = <
-       &ht N1 Q     &ht N2 W     &ht N3 E       &ht N4 R     &ht N5 T           &ht N6 Y     &ht N7 U     &ht N8 I       &ht N9 O    &ht N0 P
-       &hml LALT A  &hml LGUI S  &hml_s LSHFT D &hml LCTRL F &hml HYPER G       &hmr HYPER H &hmr LCTRL J &hmr_s LSHFT K &hmr LGUI L &hmr LALT RET
-       &kp Z        &kp X        &kp C          &hml RALT V  &hml MEH B         &hmr MEH N   &hmr RALT M  &kp COMMA       &kp DOT     &kp FSLH
-                                                &lt SYMB ESC &lt MISC TAB     &mt LSHFT SEMI &lt NAV SPACE
+       &ht N1 Q     &ht N2 W     &ht N3 E       &ht N4 R          &ht N5 T         &ht N6 Y       &ht N7 U     &ht N8 I       &ht N9 O    &ht N0 P
+       &hml LALT A  &hml LGUI S  &hml_s LSHFT D &hml LCTRL F      &hml HYPER G     &hmr HYPER H   &hmr LCTRL J &hmr_s LSHFT K &hmr LGUI L &hmr LALT RET
+       &kp Z        &kp X        &kp C          &hml RALT V       &hml MEH B       &hmr MEH N     &hmr RALT M  &kp COMMA       &kp DOT     &kp FSLH
+                                                &lt_fast SYMB ESC &lt MISC TAB     &mt LSHFT SEMI &lt NAV SPACE
                 >;
         };
 
@@ -304,7 +312,7 @@ ZMK_BEHAVIOR(ht, hold_tap,
         symbols_layer {
             bindings = <
        &kp EXCL       &kp AT         &kp GRAVE      &kp CARET        &kp DLLR             &kp QUESTION    &kp LBKT        &kp RBKT        &none        &none
-       &hml LALT PIPE &hml LGUI AMPS &hml LSHFT DQT &hml LCTRL MINUS &hml HYPER EQUAL     &hmr HYPER STAR &hmr LCTRL LPAR &hmr LSHFT RPAR &hmr LGUI LT &hml LALT GT
+       &hml LALT PIPE &hml LGUI AMPS &hml LSHFT DQT &hml LCTRL MINUS &hml HYPER EQUAL     &hmr HYPER STAR &hmr LCTRL LPAR &hmr LSHFT RPAR &hmr LGUI LT &hmr LALT GT
        &kp BSLH       &kp PERCENT    &kp SQT        &hml RALT UNDER  &kp PLUS             &kp HASH        &hmr RALT LBRC  &kp RBRC        &none        &kp TILDE
                                                     &none            &kp CAPS             &kp COLON       &none
                 >;
