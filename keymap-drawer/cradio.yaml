@@ -5,8 +5,8 @@ layers:
   - W
   - E
   - R
-  - {t: T, h: danish}
-  - {t: Y, h: danish}
+  - T
+  - Y
   - U
   - I
   - O
@@ -216,41 +216,6 @@ layers:
     loader'
   - ''
   - {type: held}
-  - ''
-  - ''
-  danish:
-  - ''
-  - ''
-  - {t: '&da_ae_lower', s: '&da_ae_upper'}
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - {t: '&da_oe_lower', s: '&da_oe_upper'}
-  - ''
-  - {t: '&da_aa_lower', s: '&da_aa_upper'}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - ''
   - ''
 combos:
