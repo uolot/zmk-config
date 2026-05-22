@@ -320,9 +320,10 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
         // BASE
         base_layer {
             bindings = <
-       &ht N1 Q     &ht N2 W     &ht N3 E       &ht N4 R          &ht N5 T         &ht N6 Y       &ht N7 U     &ht N8 I       &ht N9 O    &ht N0 P
+       // &ht N1 Q     &ht N2 W     &ht N3 E       &ht N4 R          &ht N5 T         &ht N6 Y       &ht N7 U     &ht N8 I       &ht N9 O    &ht N0 P
+       &kp Q        &kp W        &kp E          &kp R             &kp T            &kp Y          &kp U        &kp I          &kp O       &kp P
        &hml LALT A  &hml LGUI S  &hml_s LSHFT D &hml LCTRL F      &hml HYPER G     &hmr HYPER H   &hmr LCTRL J &hmr_s LSHFT K &hmr LGUI L &hmr LALT RET
-       &kp Z        &kp X        &kp C          &hml RALT V       &hml MEH B       &hmr MEH N     &hmr RALT M  &kp COMMA       &kp DOT     &kp FSLH
+       &kp Z        &kp X        &kp C          &hml RALT V       &hml MEH B       &hmr MEH N     &hmr RALT M  &kp COMMA      &kp DOT     &kp FSLH
                                                 &lt_fast SYMB ESC &lt MISC TAB     &mt LSHFT SEMI &lt NAV SPACE
                 >;
         };
